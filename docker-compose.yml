@@ -1,0 +1,23 @@
+services:
+
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: petcare
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5433:5432"
+    volumes:
+      - petcare-postgres-data:/var/lib/postgresql/data
+
+  pet-care-api:
+    build: .
+    image: pet-care-api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
+volumes:
+  petcare-postgres-data:

@@ -1,0 +1,29 @@
+# Git
+.git
+.gitignore
+
+# Gradle
+.gradle
+build/
+
+# IntelliJ
+.idea
+*.iml
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Documentation
+HELP.md
+
+# Docker Compose
+docker-compose.yml

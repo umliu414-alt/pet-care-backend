@@ -1,0 +1,290 @@
+GET http://localhost:8080/hello/Larry
+
+###
+
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "id": 100,
+  "name": "Larry"
+}
+
+###
+
+GET http://localhost:8080/api/pets/25
+
+###
+
+GET http://localhost:8080/api/pets
+
+###
+
+POST http://localhost:8080/api/pets
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Buddy",
+  "type": "Dog",
+  "ownerName": "Larry"
+}
+
+###
+
+PUT http://localhost:8080/api/pets/15
+Content-Type: application/json
+
+{
+  "name": "Buddy Updated",
+  "type": "Dog",
+  "ownerName": "Xiaoli Updated"
+}
+
+###
+
+DELETE http://localhost:8080/api/pets/45
+
+
+###
+
+POST http://localhost:8080/api/pets
+Content-Type: application/json
+
+{
+  "name": "",
+  "type": "",
+  "ownerName": ""
+}
+
+
+###
+
+PUT http://localhost:8080/api/pets/1
+Content-Type: application/json
+
+{
+"name": "Iggy",
+"type": "Dog",
+"ownerName": "Xiaoli Updated"
+}
+
+
+###
+
+PUT http://localhost:8080/api/pets/23
+Content-Type: application/json
+
+{
+  "name": "Iggy",
+  "type": "dog",
+  "ownerName": "Xiaoli Updated"
+}
+
+###
+
+
+### Create care request
+POST http://localhost:8080/api/care-requests
+Content-Type: application/json
+
+{
+  "petName": "MyIggy",
+  "petType": "Dog",
+  "ownerName": "Larry",
+  "ownerEmail": "larry@test.com",
+  "ownerPhone": "555-123-4567",
+  "careType": "BOARDING",
+  "dropOffTime": "2026-06-01T09:00:00",
+  "pickupTime": "2026-06-05T17:00:00",
+  "startDate": "2026-06-01",
+  "endDate": "2026-06-05",
+  "totalPayment": 250.00,
+  "notes": "Needs medication once a day",
+  "status": "PENDING"
+}
+
+###
+GET http://localhost:8080/api/care-requests
+
+###
+GET http://localhost:8080/api/care-requests/1
+
+### Update care request
+PUT http://localhost:8080/care-requests/1
+Content-Type: application/json
+
+{
+  "petName": "Buddy",
+  "petType": "Dog",
+  "ownerName": "Xiaoli Updated",
+  "ownerEmail": "larry@test.com",
+  "ownerPhone": "555-123-4567",
+  "careType": "BOARDING",
+  "dropOffTime": "2026-06-01T10:00:00",
+  "pickupTime": "2026-06-05T18:00:00",
+  "startDate": "2026-06-03",
+  "endDate": "2026-06-05",
+  "totalPayment": 300.00,
+  "notes": "Updated notes",
+  "status": "CONFIRMED"
+}
+
+
+###
+POST http://localhost:8080/api/care-requests
+Content-Type: application/json
+
+{
+"petId": 1,
+"ownerName": "Larry Liu",
+"ownerEmail": "test@email.com",
+"ownerPhone": "123-456-7890",
+"careType": "Boarding",
+"dropOffTime": "2026-06-01T09:00:00",
+"pickupTime": "2026-06-05T17:00:00",
+"startDate": "2026-06-01",
+"endDate": "2026-06-05",
+"totalPayment": 200,
+"notes": "Spring break care",
+"status": "PENDING"
+}
+
+###
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name": "Larry Liu",
+  "email": "larry@test.com",
+  "phone": "123-456-7890"
+}
+
+###
+
+GET http://localhost:8080/api/users
+
+###
+
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name": "Larry Liu",
+  "email": "larry@test.com",
+  "phone": "123-456-7890"
+}
+
+###
+
+POST http://localhost:8080/api/pets
+Content-Type: application/json
+
+{
+  "name": "Max",
+  "type": "Dog",
+  "ownerId": 2
+}
+
+###
+
+POST http://localhost:8080/api/care-requests
+Content-Type: application/json
+
+{
+  "petId": 1,
+  "careType": "Boarding",
+  "dropOffTime": "2026-06-01T09:00:00",
+  "pickupTime": "2026-06-05T17:00:00",
+  "startDate": "2026-06-01",
+  "endDate": "2026-06-05",
+  "totalPayment": 200,
+  "notes": "Spring break care",
+  "status": "PENDING"
+}
+
+###
+
+POST http://localhost:8080/api/pets
+Content-Type: application/json
+
+{
+  "name": "Max",
+  "type": "Dog",
+  "ownerId": "1"
+}
+
+###
+
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name": "Larry",
+  "email": "larry@test.com",
+  "phone": "1112223333"
+}
+
+###
+
+POST http://localhost:8080/api/pets
+Content-Type: application/json
+
+{
+  "name": "Lucky",
+  "type": "Dog",
+  "ownerId": 1
+}
+
+###
+POST http://localhost:8080/api/pets
+Content-Type: application/json
+
+{
+  "name": "Lucky",
+  "type": "Dog",
+  "ownerId": 999
+}
+
+
+###
+GET http://localhost:8080/api/pets/owner/1
+
+###
+
+POST http://localhost:8080/api/care-requests
+Content-Type: application/json
+
+{
+  "petId": 1,
+  "careType": "Boarding",
+  "dropOffTime": "2026-06-01T09:00:00",
+  "pickupTime": "2026-06-05T17:00:00",
+  "startDate": "2026-06-01",
+  "endDate": "2026-06-05",
+  "totalPayment": 250.00,
+  "notes": "Please feed twice daily."
+}
+
+
+###
+PATCH http://localhost:8080/api/care-requests/1/status?status=CONFIRMED
+
+###
+GET http://localhost:8080/api/care-requests/status/PENDING
+
+###
+GET http://localhost:8080/api/care-requests/pet/1
+
+###
+GET http://localhost:8080/api/care-requests/owner/2
+
+
+###
+GET http://localhost:8080/api/care-requests?page=0&size=5&sort=dropOffTime,asc
+
+###
+GET http://localhost:8080/api/care-requests?page=0&size=10&sort=createdAt,desc
+
+###
+GET http://localhost:8080/api/care-requests
