@@ -1,29 +1,24 @@
 # Git
 .git
-.gitignore
-
-# Gradle
-.gradle
-build/
 
 # IntelliJ
 .idea
 *.iml
 
+# Gradle cache
+.gradle
+
 # Logs
 *.log
 
-# Temporary files
+# Temporary
 *.tmp
 *.temp
 
-# OS files
+# OS
 .DS_Store
 Thumbs.db
 Desktop.ini
 
 # Documentation
 HELP.md
-
-# Docker Compose
-docker-compose.yml
